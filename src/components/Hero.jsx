@@ -145,8 +145,12 @@ export default function Hero() {
 
         {/* Stats */}
         <div style={{
-          display: 'flex', gap: '40px', marginTop: '80px',
-          flexWrap: 'wrap',
+          display: 'flex',
+          gap: 'clamp(10px, 4vw, 40px)',
+          marginTop: '80px',
+          flexWrap: 'nowrap',
+          justifyContent: 'space-between',
+          alignItems: 'stretch',
           animation: 'fadeUp 0.8s ease 0.3s both',
         }}>
           {[
@@ -154,14 +158,20 @@ export default function Hero() {
             { num: '7+', label: 'Certificates' },
             { num: '2025', label: 'Graduate' },
           ].map(s => (
-            <div key={s.label} style={{ borderLeft: '2px solid var(--border)', paddingLeft: '16px' }}>
+            <div key={s.label} style={{
+              borderLeft: '2px solid var(--border)',
+              paddingLeft: 'clamp(8px, 2vw, 16px)',
+              flex: '1 1 0',
+              minWidth: 0,
+            }}>
               <div style={{
-                fontFamily: 'var(--font-display)', fontSize: '1.8rem',
+                fontFamily: 'var(--font-display)', fontSize: 'clamp(1.2rem, 5vw, 1.8rem)',
                 fontWeight: 800, color: 'var(--cyan)',
               }}>{s.num}</div>
               <div style={{
-                fontFamily: 'var(--font-mono)', fontSize: '0.75rem',
+                fontFamily: 'var(--font-mono)', fontSize: 'clamp(0.62rem, 2.2vw, 0.75rem)',
                 color: 'var(--text-muted)', letterSpacing: '0.1em',
+                whiteSpace: 'nowrap',
               }}>{s.label}</div>
             </div>
           ))}

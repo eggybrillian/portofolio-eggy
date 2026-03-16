@@ -11,8 +11,6 @@ export default function Footer() {
       }}>
         <span style={{ color: 'var(--cyan)' }}>Eggy B. Brillian</span>
         {' '}·{' '}
-        Built with React + Vite
-        {' '}·{' '}
         {new Date().getFullYear()}
       </div>
     </footer>
