@@ -12,7 +12,9 @@ const contacts = [
     icon: '📱',
     label: 'WhatsApp / Telepon',
     value: '+62 878-8709-9841',
-    href: 'tel:+6287887099841',
+    href: 'https://wa.me/6287887099841?text=Halo%20saya%20ingin%20bertanya',
+    target: '_blank',
+    rel: 'noopener noreferrer',
     color: '#34d399',
   },
   {
@@ -68,7 +70,7 @@ export default function Contact() {
             {contacts.map(c => (
               <div key={c.label}>
                 {c.href ? (
-                  <a href={c.href} className="glass" style={{
+                  <a href={c.href} target={c.target} rel={c.rel} className="glass" style={{
                     display: 'flex', alignItems: 'center', gap: '16px',
                     padding: '20px 24px', textDecoration: 'none',
                   }}>

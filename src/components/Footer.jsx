@@ -11,6 +11,8 @@ export default function Footer() {
       }}>
         <span style={{ color: 'var(--cyan)' }}>Eggy B. Brillian</span>
         {' '}·{' '}
+        <span>Portofolio</span>
+        {' '}·{' '}
         {new Date().getFullYear()}
       </div>
     </footer>

@@ -108,7 +108,7 @@ export default function About() {
               dengan minat kuat di bidang <span style={{ color: 'var(--cyan)' }}>Data Analytics</span> dan{' '}
               <span style={{ color: 'var(--cyan)' }}>Data Science</span>.
             </p>
-            <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.88rem', color: 'var(--text-dim)', lineHeight: 2, marginBottom: '18px' }}>
+            <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.88rem', color: 'var(--text-dim)', lineHeight: '2', marginBottom: '18px' }}>
               Pengalaman mencakup analisis data eksploratif (EDA), visualisasi data,
               machine learning, dan membangun dashboard interaktif. Percaya bahwa data yang
               baik adalah fondasi pengambilan keputusan yang tepat.
@@ -137,7 +137,7 @@ export default function About() {
               {[
                 { num: '5+', label: 'Projects' },
                 { num: '7+', label: 'Sertifikat' },
-                { num: '2+', label: 'Tahun Belajar' },
+                { num: '4+', label: 'Tahun Belajar' },
               ].map(s => (
                 <div key={s.label} style={{ textAlign: 'center' }}>
                   <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.6rem', fontWeight: 800, color: 'var(--cyan)' }}>{s.num}</div>

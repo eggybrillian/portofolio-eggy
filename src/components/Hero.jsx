@@ -180,12 +180,12 @@ export default function Hero() {
 
       {/* Scroll hint */}
       <div style={{
-        position: 'absolute', bottom: '32px', left: '50%', transform: 'translateX(-50%)',
+        position: 'absolute', bottom: '-50px', left: '45%', transform: 'translateX(-50%)',
         display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px',
         animation: 'float 2s ease-in-out infinite',
       }}>
-        <div style={{ width: '1px', height: '40px', background: 'linear-gradient(var(--cyan), transparent)' }} />
-        <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', color: 'var(--text-muted)', letterSpacing: '0.1em' }}>scroll</span>
+          <div style={{ width: '1px', height: '40px', background: 'linear-gradient(var(--cyan), transparent)' }} />
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', color: 'var(--text-muted)', letterSpacing: '0.1em' }}>scroll</span>
       </div>
     </section>
   )

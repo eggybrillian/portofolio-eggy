@@ -80,7 +80,7 @@ function AvatarSection() {
       </div>
       <div style={{ flex:1 }}>
         <div style={{ fontFamily:'var(--font-display)', fontWeight:700, fontSize:'0.95rem', marginBottom:'4px' }}>Foto Profil</div>
-        <div style={{ fontFamily:'var(--font-mono)', fontSize:'0.72rem', color:'var(--text-muted)', marginBottom:'10px' }}>Format: JPG atau PNG · Disimpan di Supabase Storage</div>
+        <div style={{ fontFamily:'var(--font-mono)', fontSize:'0.72rem', color:'var(--text-muted)', marginBottom:'10px' }}>Format: JPG atau PNG</div>
         {message && <div style={{ fontFamily:'var(--font-mono)', fontSize:'0.75rem', marginBottom:'10px', color: message.startsWith('Error') ? '#f87171':'#34d399' }}>{message}</div>}
         <label style={{ display:'inline-flex', alignItems:'center', gap:'8px', padding:'8px 18px', background:'var(--cyan-dim)', border:'1px solid var(--border-hover)', borderRadius:'6px', fontFamily:'var(--font-mono)', fontSize:'0.78rem', color:'var(--cyan)', cursor: uploading ? 'not-allowed':'pointer', opacity: uploading ? 0.6:1 }}>
           {uploading ? 'Mengupload...' : '📷 Ganti Foto'}

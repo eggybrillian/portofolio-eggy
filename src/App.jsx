@@ -43,9 +43,9 @@ export default function App() {
       <main>
         <Hero />
         <About />
-        <Skills skills={data.skills} />
         <Projects projects={data.projects} />
         <Certificates certificates={data.certificates} />
+        <Skills skills={data.skills} />
         <Contact />
       </main>
       <Footer />
