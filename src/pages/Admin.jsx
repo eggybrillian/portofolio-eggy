@@ -22,7 +22,7 @@ function LoginForm() {
     <div style={{ minHeight:'100vh', display:'flex', alignItems:'center', justifyContent:'center', background:'var(--bg)', padding:'24px' }}>
       <div style={{ width:'100%', maxWidth:'400px', background:'rgba(255,255,255,0.03)', border:'1px solid var(--border)', borderRadius:'16px', padding:'clamp(20px, 6vw, 40px)' }}>
         <div style={{ marginBottom:'32px', textAlign:'center' }}>
-          <div style={{ fontFamily:'var(--font-display)', fontWeight:800, fontSize:'1.8rem', color:'var(--cyan)', marginBottom:'8px' }}>EB.</div>
+          <a href="/" style={{ fontFamily:'var(--font-display)', textDecoration:'none', fontWeight:800, fontSize:'1.8rem', color:'var(--cyan)', marginBottom:'8px'}}>EB.</a>
           <div style={{ fontFamily:'var(--font-mono)', fontSize:'0.75rem', color:'var(--text-muted)', letterSpacing:'0.15em' }}>// admin.login</div>
         </div>
         {error && <div style={{ padding:'12px 16px', marginBottom:'20px', background:'rgba(239,68,68,0.1)', border:'1px solid rgba(239,68,68,0.3)', borderRadius:'8px', fontFamily:'var(--font-mono)', fontSize:'0.78rem', color:'#f87171' }}>{error}</div>}
@@ -38,7 +38,7 @@ function LoginForm() {
         </div>
         <button onClick={handleLogin} disabled={loading}
           style={{ width:'100%', padding:'12px', background:'var(--cyan)', color:'var(--bg)', border:'none', borderRadius:'8px', fontFamily:'var(--font-mono)', fontSize:'0.85rem', fontWeight:700, cursor: loading ? 'not-allowed':'pointer', opacity: loading ? 0.7:1 }}>
-          {loading ? 'Masuk...' : 'Masuk'}
+          {loading ? '.....' : 'Login'}
         </button>
       </div>
     </div>

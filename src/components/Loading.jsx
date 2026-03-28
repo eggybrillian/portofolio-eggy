@@ -12,7 +12,7 @@ export default function Loading() {
         animation: 'spin 0.8s linear infinite',
       }} />
       <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem', color: 'var(--text-muted)', letterSpacing: '0.1em' }}>
-        loading...
+        Loading...
       </span>
       <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
     </div>

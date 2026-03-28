@@ -76,13 +76,12 @@ export default function About() {
 
             {/* Info cards */}
             {[
-              { icon: '📍', label: 'Lokasi', value: 'Samarinda, Kaltim' },
-              { icon: '🎓', label: 'Universitas', value: 'Unmul' },
+              { label: 'Pekerjaan', value: 'IT Software - GPE' },
+              { label: 'Lokasi', value: 'Samarinda, Kaltim' }
             ].map(item => (
               <div key={item.label} className="glass" style={{
                 padding: '12px 14px', display: 'flex', alignItems: 'center', gap: '10px',
               }}>
-                <span style={{ fontSize: '1rem', flexShrink: 0 }}>{item.icon}</span>
                 <div>
                   <div style={{ fontSize: '0.6rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)', letterSpacing: '0.1em' }}>{item.label}</div>
                   <div className="about-card-value" style={{ fontSize: '0.78rem', color: 'var(--text)', fontFamily: 'var(--font-mono)' }}>{item.value}</div>

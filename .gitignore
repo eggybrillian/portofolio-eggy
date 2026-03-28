@@ -51,3 +51,5 @@ Thumbs.db
 
 # Local tunnels / infra helpers
 .cloudflared/
+
+.supabase_schema.sql

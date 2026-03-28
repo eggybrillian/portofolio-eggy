@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react'
-import { supabase } from './lib/supabase'
+import { usePortfolioData } from './hooks/usePortfolioData'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -12,30 +11,23 @@ import Loading from './components/Loading'
 import Admin from './pages/Admin'
 
 export default function App() {
-  const [data, setData] = useState(null)
-  const [loading, setLoading] = useState(true)
+  const { data, loading, error } = usePortfolioData()
   const isAdmin = window.location.pathname === '/admin'
-
-  useEffect(() => {
-    if (isAdmin) { setLoading(false); return }
-    async function fetchAll() {
-      const [projects, certificates, skills] = await Promise.all([
-        supabase.from('projects').select('*').order('sort_order'),
-        supabase.from('certificates').select('*').order('sort_order'),
-        supabase.from('skills').select('*').order('sort_order'),
-      ])
-      setData({
-        projects: projects.data || [],
-        certificates: certificates.data || [],
-        skills: skills.data || [],
-      })
-      setLoading(false)
-    }
-    fetchAll()
-  }, [isAdmin])
 
   if (isAdmin) return <Admin />
   if (loading) return <Loading />
+  if (error) {
+    return (
+      <div style={{ minHeight: '100vh', background: 'var(--bg)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px' }}>
+        <div style={{ maxWidth: '700px', width: '100%', background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '12px', padding: '24px' }}>
+          <h2 style={{ fontFamily: 'var(--font-display)', color: 'var(--text)', marginBottom: '10px' }}>Data gagal dimuat</h2>
+          <p style={{ fontFamily: 'var(--font-mono)', color: 'var(--text-muted)', fontSize: '0.85rem', lineHeight: 1.8 }}>
+            {error}
+          </p>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <>

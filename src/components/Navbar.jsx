@@ -46,7 +46,7 @@ export default function Navbar() {
       height: '64px',
     }}>
       {/* Logo */}
-      <a href="#" style={{
+      <a href="/admin" style={{
         fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: '1.4rem',
         color: 'var(--cyan)', textDecoration: 'none', letterSpacing: '-0.02em',
       }}>
