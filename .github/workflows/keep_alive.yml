@@ -1,0 +1,27 @@
+name: Keep Supabase Alive
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Berjalan setiap hari jam 7 pagi WIB
+  workflow_dispatch:
+
+jobs:
+  ping_supabase:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping All Tables
+        run: |
+          echo "Memeriksa Tabel Projects..."
+          curl -s -X GET "${{ secrets.SUPABASE_URL }}/rest/v1/projects?select=*" \
+          -H "apikey: ${{ secrets.SUPABASE_ANON_KEY }}" \
+          -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY }}"
+
+          echo "Memeriksa Tabel Skills..."
+          curl -s -X GET "${{ secrets.SUPABASE_URL }}/rest/v1/skills?select=*" \
+          -H "apikey: ${{ secrets.SUPABASE_ANON_KEY }}" \
+          -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY }}"
+
+          echo "Memeriksa Tabel Experience..."
+          curl -s -X GET "${{ secrets.SUPABASE_URL }}/rest/v1/certificates?select=*" \
+          -H "apikey: ${{ secrets.SUPABASE_ANON_KEY }}" \
+          -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY }}"
